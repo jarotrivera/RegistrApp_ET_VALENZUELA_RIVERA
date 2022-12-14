@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar class="menu">
+    <ion-title class="ion-text-center">Código Qr</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="inicio-docente" text="Volver" mode="ios" color="primary"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="inicio">
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Nombre Ramo: </ion-label>
+        <ion-input type="text" [(ngModel)]="ramo.nombre" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="fixed">Fecha Día: </ion-label>
+        <ion-input type="text" [value]="fechaActual" disabled ></ion-input>
+      </ion-item>
+
+      <ion-button (click)="generaScan()" expand="block" fill="clear" shape="round" class="btnqr">
+        Generar QR
+      </ion-button>
+      <br><br>
+
+      <qrcode [qrdata]="qrCodeString" [width]="240" [errorCorrectionLevel]="'M'"></qrcode>
+
+
+      <div class="content-qr">
+        <h4 style="font-size:18px;">QR Asistencia, porfavor escanearlo.</h4>
+        
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+ 
+<!--   <ion-button (click)="verScan()" expand="block" class="ion-margin">
+    Ver QR
+  </ion-button>
+
+  <ion-item>
+    <ion-label class="ion-text-wrap">Scan Result: {{scannedResult}}</ion-label>
+  </ion-item>
+ -->
+  
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="menu">
+    <ion-title style="font-weight: 700;">RegistrApp</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="onClick()">
+        <ion-icon slot="start" name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content class="inicio">
+  <div class="imginicio">
+    <img src="../../assets/University-PNG.png" >
+
+    <div id="container" class="ion-justify-content-center">
+      <ion-button [routerLink]="['/login']" expand= "undefined" fill="clear" shape="round" class="btninicio" size="large">
+        <h2 class="txtinicio">INICIAR</h2>
+      </ion-button>
+    </div>
+  </div>
+
+</ion-content>

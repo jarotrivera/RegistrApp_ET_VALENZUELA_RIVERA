@@ -1,0 +1,144 @@
+<ion-header>
+  <ion-toolbar class="menu">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Volver" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="inicio">
+  <div class="middle">
+    <p id="titulo"> Registro cuenta Docente</p>
+    
+    <img class="foto1" src="../../assets/fotodocente.PNG">
+
+    <!-- <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
+
+    
+ <ion-item>
+  <ion-label position="fixed">Nombre: </ion-label>
+  <ion-input type="text" name="nombre" maxlength="32" minlength="2" [(ngModel)]="newDato.nombre" required
+  pattern="[A-Za-z]{1,32}"></ion-input>
+ </ion-item>
+
+  <ion-item>
+    <ion-label position="fixed">Rut: </ion-label>
+    <ion-input type="text" name="rut" [(ngModel)]="newDato.rut" required
+    pattern="\d{3,8}-[\d|kK]{1}"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="fixed">Correo: </ion-label>
+    <ion-input type="email" name="email" [(ngModel)]="newDato.email" required
+    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="fixed">Contraseña: </ion-label>
+    <ion-input type="password" name="password" [(ngModel)]="newDato.password" required
+    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$"></ion-input>
+  </ion-item>
+
+
+  <ion-list>
+    <ion-item>
+      <ion-select placeholder="Sede" name="sede" [(ngModel)]="newDato.sede">
+        <ion-select-option value="Alameda" >Sede Alameda</ion-select-option>
+        <ion-select-option value="Antonio Varas">Sede Antonio Varas</ion-select-option>
+        <ion-select-option value="Educación Continua">Sede Educación Continua</ion-select-option>
+        <ion-select-option value="Maipú">Sede Maipú</ion-select-option>
+        <ion-select-option value="Melipilla">Sede Melipilla</ion-select-option>
+        <ion-select-option value="Padre Alonso">Sede Padre Alonso de Ovalle</ion-select-option>
+        <ion-select-option value="Plaza Norte">Sede Plaza Norte</ion-select-option>
+        <ion-select-option value="Plaza Oeste">Sede Plaza Oeste</ion-select-option>
+        <ion-select-option value="Puente Alto">Sede Puente Alto</ion-select-option>
+        <ion-select-option value="San Bernardo">Sede San Bernardo</ion-select-option>
+        <ion-select-option value="Carlos de Apoquindo">Sede San Carlos de Apoquindo</ion-select-option>
+        <ion-select-option value="San Joaquín">Sede San Joaquín</ion-select-option>
+        <ion-select-option value="Valparaíso">Sede Valparaíso</ion-select-option>
+        <ion-select-option value="Viña Del Mar">Sede Viña del Mar</ion-select-option>
+        <ion-select-option value="Campus Arauco">Campus Arauco</ion-select-option>
+        <ion-select-option value="Campus Nacimiento">Campus Nacimiento</ion-select-option>
+        <ion-select-option value="San Andrés De Concepción">Sede San Andrés de Concepción</ion-select-option>
+        <ion-select-option value="Campus Villarica">Campus Villarica</ion-select-option>
+        <ion-select-option value="Puerto Montt">Sede Puerto Montt</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+
+
+  <ion-button (click)="addDatos()" expand="full" [disabled]="loginForm.invalid">
+    Agregar Docente
+  </ion-button>
+
+
+</form> -->
+
+
+
+
+ <form [formGroup]="formularioRegistro" (keyup.enter)="addDato()">
+  <ion-item>
+    <ion-label position="floating">Nombre: </ion-label>
+    <ion-input type="text" name="nombre" maxlength="32" minlength="2" formControlName="nombre" required
+    pattern="[A-Za-z]{1,32}"></ion-input>
+   </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Rut(Sin puntos, con guión): </ion-label>
+      <ion-input type="text" name="rut" formControlName="rut" required
+      pattern="\d{3,8}-[\d|kK]{1}" style="font-size: 15px"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Correo: </ion-label>
+      <ion-input type="email" name="email" formControlName="email" required
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label position="floating">Contraseña: </ion-label>
+      <ion-input type="password" name="password" formControlName="contraseña" required
+      pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$"></ion-input>
+    </ion-item>
+  
+  
+    <ion-list>
+      <ion-item>
+        <ion-select placeholder="Sede" name="sede" formControlName="sede">
+          <ion-select-option value="Alameda" >Sede Alameda</ion-select-option>
+          <ion-select-option value="Antonio Varas">Sede Antonio Varas</ion-select-option>
+          <ion-select-option value="Educación Continua">Sede Educación Continua</ion-select-option>
+          <ion-select-option value="Maipú">Sede Maipú</ion-select-option>
+          <ion-select-option value="Melipilla">Sede Melipilla</ion-select-option>
+          <ion-select-option value="Padre Alonso">Sede Padre Alonso de Ovalle</ion-select-option>
+          <ion-select-option value="Plaza Norte">Sede Plaza Norte</ion-select-option>
+          <ion-select-option value="Plaza Oeste">Sede Plaza Oeste</ion-select-option>
+          <ion-select-option value="Puente Alto">Sede Puente Alto</ion-select-option>
+          <ion-select-option value="San Bernardo">Sede San Bernardo</ion-select-option>
+          <ion-select-option value="Carlos de Apoquindo">Sede San Carlos de Apoquindo</ion-select-option>
+          <ion-select-option value="San Joaquín">Sede San Joaquín</ion-select-option>
+          <ion-select-option value="Valparaíso">Sede Valparaíso</ion-select-option>
+          <ion-select-option value="Viña Del Mar">Sede Viña del Mar</ion-select-option>
+          <ion-select-option value="Campus Arauco">Campus Arauco</ion-select-option>
+          <ion-select-option value="Campus Nacimiento">Campus Nacimiento</ion-select-option>
+          <ion-select-option value="San Andrés De Concepción">Sede San Andrés de Concepción</ion-select-option>
+          <ion-select-option value="Campus Villarica">Campus Villarica</ion-select-option>
+          <ion-select-option value="Puerto Montt">Sede Puerto Montt</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-button (click)="addDato()" expand="full" class="btn">
+      Agregar Docente
+    </ion-button>
+
+ </form>
+      
+ </div>
+
+
+ 
+</ion-content>
+

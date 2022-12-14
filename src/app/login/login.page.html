@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar class="menu">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Volver" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+    <img src="../../assets/University-PNG.png" class="ion-float-right" >
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="inicio">
+
+  <div id="container1">
+    <ion-button [routerLink]="['/logindocente']" expand= "undefined" fill="clear" shape="round" class="btninicio1" size="default">
+      DOCENTE
+    </ion-button>
+  </div>
+  <div id="container1">
+    <ion-button [routerLink]="['/loginestudiante']" expand= "undefined" fill="clear" shape="round" class="btninicio2" size="default">
+      ALUMNOS
+    </ion-button>
+  </div>
+
+</ion-content>

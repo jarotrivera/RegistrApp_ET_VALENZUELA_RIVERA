@@ -1,0 +1,33 @@
+<ion-app>
+
+  <ion-menu contentId="main" menuId="first" side="start">
+    <ion-header >
+      <ion-toolbar class="menu-color">
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content class="item" >
+      <ion-list >
+        <ion-menu-toggle *ngFor="let c of componentes">
+          <ion-item [routerLink]="c.redirecTo" detail=true >
+            <ion-icon slot="start" [name]="c.icon"></ion-icon> <!--name entre corchetes por variable-->
+            {{c.name}}
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+      
+    </ion-content>
+    <ion-footer>
+      <ion-toolbar class="menu-color">
+        <ion-title style="font-size: 15px">&copy; Jarot R.<br> Felipe V.</ion-title>
+      </ion-toolbar>
+    </ion-footer>
+  </ion-menu>
+
+  
+
+
+  <ion-router-outlet id="main"></ion-router-outlet>
+  
+</ion-app>

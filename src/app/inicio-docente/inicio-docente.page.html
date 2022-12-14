@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar class="menu">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Volver" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="inicio">
+  <h2 class="ion-text-center">Bienvenido {{nombreDocente}}</h2>
+  <h4 class="identificador">Docente</h4>
+  
+
+  <ion-button routerLink="/" expand="block" fill="clear" shape="round" class="btnDeslog" (click)="desloguear()">
+    Deslogear
+  </ion-button>
+
+  <img alt="Silhouette of a person's head" class="fotoperfil" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+
+  <div class="content-codigo">
+    <h4>Crear Código QR:</h4>
+    <ion-button routerLink="/codigoqr" expand="block" fill="clear" shape="round" class="btnCodigoAsistencia">
+      Generar Código QR
+    </ion-button>
+  </div>
+  <div class="content-asistencia">
+    <h4>Verificar asistencia:</h4>
+    <ion-button (click)="onClick()" expand="block" fill="clear" shape="round" class="btnCodigoAsistencia">
+      Verificar asistencia
+    </ion-button>
+  </div>
+</ion-content>

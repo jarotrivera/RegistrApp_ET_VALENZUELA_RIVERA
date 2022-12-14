@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar class="menu">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Volver" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+    <img src="../../assets/University-PNG.png" class="ion-float-right" >
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="inicio">
+  <div class="middle">
+    <p id="titulo"> Bienvenido Estudiante</p>
+    
+    <img class="foto1" src="../../assets/fotodocente.PNG">
+
+    <div class="box">
+      <form [formGroup]="formularioLogin">
+        <ion-item>
+         <ion-label position="floating">Correo: </ion-label>
+         <ion-input type="email" formControlName="correo"></ion-input>
+        </ion-item>
+       
+         <ion-item>
+           <ion-label position="floating">Contraseña: </ion-label>
+           <ion-input type="password" formControlName="contraseña"></ion-input>
+         </ion-item>
+
+       
+         <ion-button (click)="Ingresar()" expand="full" class="btn">
+           Ingresar
+         </ion-button>
+      
+         <p id="claveolvidada" (click)="goToForget()" href=""> Olvidaste Tu Contraseña?</p>
+         <p id="claveolvidada" routerLink="/registro-alumno">No tienes cuenta?</p>
+      </form>
+    </div>
+ </div>
+</ion-content>
+

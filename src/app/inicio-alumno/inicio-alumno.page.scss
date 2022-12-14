@@ -1,0 +1,93 @@
+ion-content.inicio{
+    --background:url(../../assets/imgfondo1.jpeg); 
+}
+
+.ion-text-center{
+    font-size: 25px;
+    color: #F78D90;
+    position: relative;
+    top: 40%;
+}.identificador{
+    position: relative;
+    top: 40%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.btnDeslog{
+    --background: #19214f;
+
+    color: white;
+    border-radius: 10px;
+    width: 30%;
+    font-size: 11px;
+    float: right;
+    margin-top: -15%;
+}
+
+.btnApi{
+    background-color: #F78D90;
+    color: white;
+    border-radius: 10px;
+    width: 30%;
+    font-size: 11px;
+    float: right;
+    margin-top: -2%;
+}
+.ion-padding{
+    --background: url(../../assets/University-PNG.png);
+}
+.card-modal{
+    font-weight: 650;
+}
+.menu{
+    --background: #19214f;
+
+}
+
+
+.fotoperfil{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 10%;
+    position: relative;
+    top: -2vh;
+    margin-left:35%;
+}
+
+
+
+//Divs de las opciones botones, CodigoQR y Asistencia
+
+//Codigo QR -----------------------
+.content-codigo{
+    position: relative;
+    top: 18vh;
+    color: black;
+}.content-codigo h4{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}//--------------------------------
+
+//Asistencia ----------------------
+.content-asistencia{
+    position: relative;
+    top: 20vh;
+    color: black;
+}.content-asistencia h4{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}//--------------------------------
+
+//Botones
+.btnCodigoAsistencia{
+    background-color: #F78D90;
+    color: white;
+    border-radius: 10px;
+}
+//---------------------------------

@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar class="menu">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Volver" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="inicio">
+  
+
+  <h2 class="ion-text-center">Bienvenido {{nombreAlumno}} </h2>
+  <h4 class="identificador">Alumno</h4>
+  
+
+  <ion-button routerLink="/" expand="block" fill="clear" shape="round" class="btnDeslog" (click)="deslogear()">
+    Deslogear
+  </ion-button>
+
+  <ion-button id="open-modal" expand="block" class="btnApi" fill="clear" shape="round">Info Día</ion-button>
+  <p>{{ message }}</p>
+  <ion-modal trigger="open-modal"  >
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Datos día</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        
+        <ion-card >
+          <br>
+          <br>
+          <ion-item lines="none" class="card-modal"><p>La Fecha de hoy es:</p></ion-item>
+          <ion-item class="card-modal">
+            <ion-label > {{todayDate}} | date: "EEE dd MMM}}</ion-label>
+          </ion-item>
+
+          <br>
+
+
+          <ion-item lines="none" class="card-modal"><p>La temperatura de hoy es: <span slot="end">
+            {{(weatherTemp?.temp - 273.15).toFixed(0)}} 
+           </span> <span>°</span>
+          </p></ion-item>
+<br>
+      
+          <ion-item class="card-modal">
+            <ion-icon name="location"></ion-icon>
+            <span>{{cityName}}</span>
+          </ion-item>
+          <ion-item class="card-modal">
+            <span>Maxima Temp</span>
+            <span slot="end">{{(weatherTemp.temp_max - 273.15).toFixed(0)}}°</span>
+          </ion-item>
+          <ion-item class="card-modal">
+            <span>Minima Temp</span>
+            <span slot="end">{{(weatherTemp.temp_min - 273.15).toFixed(0)}}°</span>
+          </ion-item>
+          <ion-item class="card-modal">
+            <span>Humedad</span>
+            <span slot="end">{{weatherTemp.humidity}}%</span>
+          </ion-item>
+      
+        </ion-card>
+
+
+
+
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+
+
+
+
+
+    <img alt="Silhouette of a person's head" class="fotoperfil" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+
+
+  <div class="content-codigo">
+    <h4>Leer Código QR:</h4>
+    <ion-button (click)="scan()" expand="block" fill="clear" shape="round" class="btnCodigoAsistencia">
+      Código QR
+    </ion-button>
+  </div>
+</ion-content>

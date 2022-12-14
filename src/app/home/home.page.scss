@@ -1,0 +1,55 @@
+
+ion-menu-button {
+  color: var(--ion-color-primary);
+}
+
+/* ion-content.inicio{
+  --background:url(../../assets/University-PNG.png) 100% no-repeat;
+
+
+
+
+} */
+
+.menu{
+  --background: #19214f;
+
+}
+
+
+.btninicio{
+  color: #f5f5f5;
+  background-color:#F78D90;
+  width: 260px;
+  height: 100px;
+  border-radius: 30px;
+  font-family:'Poppins';
+  
+}
+
+
+#container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:50%
+}
+
+.ion-float-right{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+/*--------------------*/
+
+.txtinicio{
+  animation: iniciar 2s infinite;
+}
+
+@keyframes iniciar{
+  0% {transform: scale(1);}
+  50% {transform: scale(1.2);}
+  100% {transform: scale(1);}
+}

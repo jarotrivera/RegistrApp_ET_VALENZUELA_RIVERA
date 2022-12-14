@@ -1,0 +1,107 @@
+
+ion-content.inicio{
+    --background:url(../../assets/fondonormal.PNG) no-repeat center ;
+
+}
+
+.menu{
+    --background: #19214f;
+
+}
+
+.btninicio1{
+    color: #f5f5f5;
+    background-color:#F78D90;
+    width: 220px;
+    height: 60px;
+    border-radius: 30px;
+    font-family:'Poppins';
+    
+}
+#container1{
+    text-align: center;
+    position: relative;
+    left: 3px;
+    right: 10px;
+    top:72%;
+}
+
+
+.login-section{
+    height: 74vh;
+    width: 100%;
+    max-width: 500px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: relative;
+    margin: auto;
+    
+}
+
+#titulo{
+    font-size: 24px;
+    color: #000000;
+    text-align: center;
+    position: relative;
+    right: 8px;
+    left: 0px;
+    bottom: -15px;
+
+}
+
+.foto1{
+    position: relative;
+    width: 130px;
+    height: 130px;
+    right: 0px;
+    left: 70px;
+    bottom: -6px;
+}
+.middle{
+    padding: 20px;
+    ion-item{
+        --background: #19214f;
+    }
+    .btn{
+        display: flex;
+        justify-content: center;
+
+        --background: #F78D90;
+    
+    }
+    .box{
+        border-radius: 20px;
+        height: 60px;
+        background: #ffffff;
+        padding: 5px;
+        position: relative;
+        top: 0.1em;
+
+
+        p{
+            color: #F78D90;
+            text-align: center;
+        }
+
+        ion-item{
+            ion-icon{
+                color: #F78D90;
+                bottom: auto;
+            }
+        }
+        #claveolvidada{
+            font-size: 14px;
+            color: #F78D90;
+            text-align: center;
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+
+            ion-button{
+                --background:#F78D90
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar class="menu">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Volver" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title>FAQ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="inicio">
+
+  <ion-accordion-group>
+    <ion-accordion value="first">
+      <ion-item slot="header" color="light">
+        <ion-label>¿Cómo funciona?</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Después de iniciar sesión, el docente generará un código QR que el alumno tendrá que escanearlo mediante una opción de la misma aplicación para que su asistencia quede registrada.
+      </div>
+    </ion-accordion>
+    <ion-accordion value="second">
+      <ion-item slot="header" color="light">
+        <ion-label class="donde">¿Dónde puedo <br>contactarme para más <br> dudas?</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        Puedes contactarte directamente con Mesa de Servicios (+56) 44220 1098
+      </div>
+    </ion-accordion>
+    <ion-accordion value="third">
+      <ion-item slot="header" color="light">
+        <ion-label>¿Qué hacer si <br>mi asistencia no queda <br>registrada?</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">
+        En caso de que ocurra algún problema, el docente deberá registrar la asistencia manualmente.
+      </div>
+    </ion-accordion>
+  </ion-accordion-group>
+</ion-content>

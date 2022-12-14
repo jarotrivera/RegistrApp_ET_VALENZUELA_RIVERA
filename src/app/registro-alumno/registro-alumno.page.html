@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar class="menu">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="Volver" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="inicio">
+  <div class="middle">
+    <p id="titulo"> Registro cuenta Estudiante</p>
+    
+    <img class="foto1" src="../../assets/fotodocente.PNG">
+
+    <div class="box">
+     <form [formGroup]="formularioRegistro" (keyup.enter)="addDato()">
+      <ion-item>
+        <ion-label position="fixed">Nombre: </ion-label>
+        <ion-input type="text" name="nombre" formControlName="nombre" required maxlength="32" minlength="2"
+        pattern="[A-Za-z]{1,32}"></ion-input>
+       </ion-item>
+      
+        <ion-item>
+          <ion-label position="fixed">Apellido: </ion-label>
+          <ion-input type="text" name="apellido" formControlName="apellido" required maxlength="32" minlength="2"
+          pattern="[A-Za-z]{1,32}"></ion-input>
+        </ion-item>
+      
+      
+        <ion-item>
+          <ion-label position="fixed">Correo: </ion-label>
+          <ion-input type="email" name="correo" formControlName="email" required
+          pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label position="fixed">Contraseña: </ion-label>
+          <ion-input type="password" name="password" minlength="4" formControlName="contraseña" required
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$"></ion-input>
+        </ion-item>
+
+      
+        <ion-list>
+          <ion-item>
+            <ion-select placeholder="Sede" name="sede" formControlName="sede">
+              <ion-select-option value="Alameda" >Sede Alameda</ion-select-option>
+              <ion-select-option value="Antonio Varas">Sede Antonio Varas</ion-select-option>
+              <ion-select-option value="Educación Continua">Sede Educación Continua</ion-select-option>
+              <ion-select-option value="Maipú">Sede Maipú</ion-select-option>
+              <ion-select-option value="Melipilla">Sede Melipilla</ion-select-option>
+              <ion-select-option value="Padre Alonso">Sede Padre Alonso de Ovalle</ion-select-option>
+              <ion-select-option value="Plaza Norte">Sede Plaza Norte</ion-select-option>
+              <ion-select-option value="Plaza Oeste">Sede Plaza Oeste</ion-select-option>
+              <ion-select-option value="Puente Alto">Sede Puente Alto</ion-select-option>
+              <ion-select-option value="San Bernardo">Sede San Bernardo</ion-select-option>
+              <ion-select-option value="Carlos de Apoquindo">Sede San Carlos de Apoquindo</ion-select-option>
+              <ion-select-option value="San Joaquín">Sede San Joaquín</ion-select-option>
+              <ion-select-option value="Valparaíso">Sede Valparaíso</ion-select-option>
+              <ion-select-option value="Viña Del Mar">Sede Viña del Mar</ion-select-option>
+              <ion-select-option value="Campus Arauco">Campus Arauco</ion-select-option>
+              <ion-select-option value="Campus Nacimiento">Campus Nacimiento</ion-select-option>
+              <ion-select-option value="San Andrés De Concepción">Sede San Andrés de Concepción</ion-select-option>
+              <ion-select-option value="Campus Villarica">Campus Villarica</ion-select-option>
+              <ion-select-option value="Puerto Montt">Sede Puerto Montt</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      
+      
+        <ion-list>
+          <ion-item>
+            <ion-select placeholder="Horario" name="turno" formControlName="jornada">
+              <ion-select-option value="Diurno" >Diurno</ion-select-option>
+              <ion-select-option value="Vespertino">Vespertino</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+        
+
+        <ion-button (click)="addDato()" expand="full" class="btn">
+          Agregar Estudiante
+        </ion-button>
+      
+     </form>
+    </div>
+ </div>
+
+
+
+ 
+
+  </ion-content>
+
